@@ -1,0 +1,43 @@
+block > div{
+    background-color: blue;
+    box-shadow:10px 10px 10px 0 green, -10px 10px 10px 0 orange;
+    margin-bottom: 30px;
+    padding: 30px;
+}
+
+block > div:nth-child(2n+1) > div{
+    border:20px solid black;
+    border-image-source:url(./img/matrix.png);
+    border-image-slice:50 50 50 50;
+    border: image outset 20px;
+    background-color: white;
+}
+
+block > div:nth-child(2n) > div{
+    border-top:20px solid black;
+    border-image-source:url(./img/heart.gif);
+    border-image-slice:50 50 50 50;
+    background-color: yellow;
+}
+
+
+block > div > div[title="red"]{
+    color: red;
+}
+[title="red 20px-bold right"]{
+    color: red;
+    font-size: 20px;
+    font-weight: bold;
+    text-align: right;
+}
+[title="red 20px-italic-bold center"]{
+    color: red;
+    font-size: 20px;
+    font-weight: initial;
+    text-align: center;
+}
+[title="20px-italic-bold center"]{
+    font-size: 20px;
+    font-weight: initial;
+    text-align: center;
+}
