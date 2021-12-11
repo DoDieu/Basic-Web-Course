@@ -1,0 +1,29 @@
+* {
+    font-family: Arial, Helvetica, sans-serif;
+}
+.td-html {
+    letter-spacing: ;
+    word-break:break-all;
+    writing-mode: vertical-lr;
+}
+.td-css{
+    text-decoration: overline red;
+    vertical-align: middle;
+    word-break:break-all;
+}
+.td-Javascipt{
+    vertical-align: bottom;
+    word-break:break-all;
+}
+h1.html+ *{
+    color: red;
+}
+
+h1.css ~p {
+    color: red;
+}
+
+p.pseudo{
+    /* content:attr("hello-"); */
+    border: 1px solid black;
+}

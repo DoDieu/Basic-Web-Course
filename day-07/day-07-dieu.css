@@ -5,7 +5,7 @@ block > div{
     padding: 30px;
 }
 
-block > div:nth-child(2n+1) > div{
+block > div:nth-child(2n+1) div{
     border:20px solid black;
     border-image-source:url(./img/matrix.png);
     border-image-slice:50 50 50 50;
