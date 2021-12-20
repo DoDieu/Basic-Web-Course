@@ -4,7 +4,6 @@
 
 #table-container{
     border: 3px solid red;
-    width:400px;
     overflow:auto;
 }
 table, th, td {
@@ -12,7 +11,7 @@ table, th, td {
 }
 table{
     border-collapse: collapse;
-    width: 600px;
+    width:100%;
 }
 tr:nth-child(odd){
     background-color: darkgray;
@@ -29,6 +28,7 @@ tr:hover{
 }
 .border-box{
     /* Cài đặt tại đây */
+
 }
 .content-box{
     /* Cài đặt tại đây */
