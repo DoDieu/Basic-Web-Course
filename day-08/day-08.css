@@ -2,12 +2,12 @@
     font-family: Arial, Helvetica, sans-serif;
 }
 .td-html {
-    letter-spacing: ;
+    letter-spacing;
     word-break:break-all;
     writing-mode: vertical-lr;
 }
 .td-css{
-    text-decoration: overline red;
+    text-decoration: overline red wavy;
     vertical-align: middle;
     word-break:break-all;
 }
@@ -24,6 +24,6 @@ h1.css ~p {
 }
 
 p.pseudo{
-    /* content:attr("hello-"); */
+    content:attr("hello-"); */
     border: 1px solid black;
 }
