@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <button onclick="hello()">Xin chào</button>
+    <p id="demo"></p>
+
+    <script>
+        document.write("<h3>Bài 1: </h3>");
+
+        function introMy(name, age, address) {
+            document.write("Tôi tên \"" + name + "\", năm nay tôi \"" + age + "tuổi \" ." + "<br>");
+            document.write("Tôi đang sống tại \"" + address + "\" ." + "<br>");
+        }
+        var name1 = "Diệu";
+        var age1 = 28;
+        var address1 = "tỉnh Kanagawa";
+        introMy(name1, age1, address1);
+
+        document.write("<h3>Bài 2: </h3>");
+        var student1 = {
+            name: "Đỗ Diệu",
+            age: 28,
+            address: "tỉnh Kanagawa"
+        }
+        var showTest = {
+            show: function () {
+                introMy(student1.name, student1.age, student1.address)
+            }
+        };
+
+        for (let i = 0; i < 5; i++) {
+            document.write("<p>----In Lần "+(i+1)+"-------</p>")
+            showTest.show();
+        }
+
+        document.write("<h3>Bài 3: </h3>");
+        //(1) Tìm kiếm và thay thế {{name)}}, {{age}}, và {{address}}
+        document.write("<p>(1) Tìm kiếm và thay thế {{name)}}, {{age}}, và {{address}}</p>")
+        var text = "Tôi tên \"{{name}}\", năm nay tôi \"{{age}} tuổi\".\nTôi đang sống tại \"{{address}}\".";
+        var n = text.replace("{{name}}", student1.name);
+        var a = n.replace("{{age}}",student1.age);
+        var ad = a.replace("{{address}}",student1.address);
+        document.write(ad);
+
+        //(2) Đếm độ dài của đoạn text sau khi thay thế nội dung
+        document.write("<p>(2) Đếm độ dài của đoạn text sau khi thay thế nội dung</p>")
+        document.write(ad.length);
+        //(3) Loại bỏ đoạn chữ năm nay tôi ra khỏi đoạn text đã thay thế nội dung ở (1), và in đoạn text còn lại sau khi loại bỏ.
+        document.write("<p>(3)</p>");
+        var del = ad.replace("năm nay tôi","");
+        document.write(del);
+        //(4) Chuyển toàn bộ ký tự của đoạn text (1) về dạng chữ in hoa.
+        document.write("<p>(4)</p>");
+        document.write(del.toUpperCase());
+        //(5) Chuyển toàn bộ ký tự của đoạn text (1) về dạng chữ thường.
+        document.write("<p>(5)</p>");
+        document.write(del.toLowerCase());
+        //(6) Trích xuất chuỗi con Tôi ở đầu bằng 2 cách: substring(), substr().
+        document.write("<p>(6)</p>");
+        var str1 = ad.substring(0,17);
+        var str2 = ad.substr(27,14);
+        document.write(str1);
+        document.write(str2);
+        //(7) Trả về chỉ số của chuỗi Tôi được tìm thấy sau cùng.
+        document.write("<p>(7)</p>");
+        //(8) Nối chuỗi  ”Tôi là người Việt Nam.” vào sau đoạn text (1).
+        document.write(ad.concat("Tôi là người Việt Nam."));
+        document.write("<p>(8)</p>");
+        //(9) Trích xuất ký tự kế cuối trong chuỗi (8).
+        document.write("<p>(9)</p>");
+        //(10) Tìm tất cả những chữ tôi (không phân biệt trường hợp chữ in hoa hay chữ thường) bên trong chuỗi text.
+        document.write(ad.search("tôi"));
+
+        //
+        function hello(){
+            showTest.show();
+        }
+        document.write("<h3>Bài 5: </h3>");
+        var n1 = Math.pow(1.25,4);
+        var a1 = Math.abs(3.5);
+        var n2 = Math.pow(a1,4)
+
+        
+    </script>
+
+
+</body>
+
+</html>

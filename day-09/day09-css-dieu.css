@@ -5,13 +5,14 @@
 #table-container{
     border: 3px solid red;
     overflow:auto;
+    width: 400px;
 }
 table, th, td {
     border: 1px solid black;
 }
 table{
     border-collapse: collapse;
-    width:100%;
+    width:600px;
 }
 tr:nth-child(odd){
     background-color: darkgray;
