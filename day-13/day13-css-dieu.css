@@ -1,0 +1,6 @@
+* {
+    font-family: Arial, Helvetica, sans-serif;
+}
+.check{
+    list-style-image: url('https://webcoban.vn/image/check.jpg');
+}

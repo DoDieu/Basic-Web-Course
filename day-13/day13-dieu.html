@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="./day13-dieu.js"></script>
+    <link rel="stylesheet" href="./day13-css-dieu.css">
+    <title>Day 13 - Javascript</title>
+</head>
+
+<body>
+    <b>Thời gian hiện tại:</b>
+    <script>
+        var date = (new Date()).toString();
+        document.write(date);
+        //tach chuoi bang split
+        /*var datearray = date.split(" ");
+        for(let i = 0; i < datearray.length; i++){
+            document.write(datearray[i]);
+            document.write("<br/>")
+        }*/
+    </script>
+    <div class="check"><b>Thứ hiện tại:</b>
+        <script>
+            document.write(date.substr(0, 3));
+        </script>
+    </div>
+    <div style="list-style-image: url('https://webcoban.vn/image/check.jpg');"><b>Tháng hiện tại:</b>
+        <script>
+            document.write(date.substr(4, 3));
+        </script>
+    </div>
+    <div><b>Ngày hiện tại:</b>
+        <script>
+            document.write(date.substr(8, 2));
+        </script>
+    </div>
+    <div><b>Năm hiện tại:</b>
+        <script>
+            document.write(date.substr(11, 4));
+        </script>
+    </div>
+    <div><b>Giờ hiện tại:</b>
+        <script>
+            
+        </script>
+    </div>
+    <div><b>Múi giờ hiện tại:</b>
+        <script>
+
+        </script>
+    </div>
+    <div><b>Tổng các chữ số có trong chuỗi :</b>
+        <script>
+            var num = /0~9/;
+            var num1 = date.exec(num);
+            document.write(num1);
+        </script>
+    </div>
+    
+
+</body>
+
+</html>
