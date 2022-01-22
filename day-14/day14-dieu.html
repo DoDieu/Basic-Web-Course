@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="./day14.css">
+    <script src="./day14.js"></script>
+</head>
+
+<body>
+    <h2>DAY 14 - SORT, IF-ELSE, SWITCH-CASE, LOOP, BREAK-CONTINUE</h2>
+    <div class="day14">
+        <form action="">
+            <div>
+                <label>Dãy số cần tính: </label>
+                <input class="numInput" type="text" id="numList">
+
+            </div>
+
+            <div>
+                <label>Số dòng tối đa cần hiển thị:</label>
+                <input type="text" id="soDong">
+            </div>
+
+            <input class="btn" type="button" value="Submit" onclick="checkList()">
+            <script>
+                function checkList() {
+                    let list1 = document.getElementById("numList").value;
+                    let n = document.getElementById("soDong").value;
+
+                    let resultCheck = checkL(list1);
+
+                    let rSoDong = checkL(n);
+
+                    if (rSoDong == null) {
+                        list = listSort(list1);
+                        console.log(list);
+                        document.getElementById("listLen").innerHTML = list.length;
+
+                        // let dong = Math.ceil(list.length / n);
+                        // j = 0;
+                        // while (j < list.length) {
+                        //     for (let i = 0; i < dong; i++) {
+                        //         document.write("<button>" + list[j] + "</button>");
+                        //         j++;
+                        //     }
+                        // }
+
+
+                    }
+                }
+            </script>
+            <div>
+                <label>Số lượng các chữ số: </label>
+                <span id="listLen"></span>
+            </div>
+        </form>
+    </div>
+</body>
+
+</html>
