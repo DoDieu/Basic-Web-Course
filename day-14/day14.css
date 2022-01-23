@@ -17,5 +17,34 @@ label {
     min-width: 100px;
 }
 .btn {
-    text-align: right;
+    background-color: brown;
 }
+
+.bt1 {
+    padding: 5px;
+    margin: 10px;
+    float: left;
+    
+}
+.so0{
+    background-color:white;
+    color:black;
+}
+.soam{
+    color:white;
+}
+.soam.odd{
+    background-color:red;
+}
+.soam.even{
+    background-color:rgb(233, 139, 139);
+}
+.soduong.odd{
+    background-color:rgb(25, 248, 4);
+    color:white;
+}
+.soduong.even{
+    background-color:rgb(112, 216, 112);
+    color:white;
+}
+

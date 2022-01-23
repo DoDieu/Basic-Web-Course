@@ -40,13 +40,39 @@
                         console.log(list);
                         document.getElementById("listLen").innerHTML = list.length;
 
-                        // let dong = Math.ceil(list.length / n);
-                        // j = 0;
+                        let dong = Math.ceil(list.length / n);
+                        j = 0;
                         // while (j < list.length) {
-                        //     for (let i = 0; i < dong; i++) {
-                        //         document.write("<button>" + list[j] + "</button>");
-                        //         j++;
-                        //     }
+                            let ketqua = "";
+                            
+                            for (let i = 0; i < list.length; i++) {
+                                
+                                if(list[i] < 0){
+                                    if(list[i]%2 == 0){
+                                        ketqua += "<button class =\"btn1 soam odd \">" +list[i]+ "</button>";
+                                    }
+                                    else{
+                                        ketqua += "<button class =\"btn1 soam even\">" +list[i]+ "</button>";
+                                    }
+                                }
+                                else if(list[i] > 0){
+                                    if(list[i]%2 == 0){
+                                        ketqua += "<button class =\"btn1 soduong odd\">" +list[i]+ "</button>";
+                                    }
+                                    else{
+                                        ketqua += "<button class =\"btn1 soduong even\">" +list[i]+ "</button>"; 
+                                    }
+                                }
+                                else{
+                                    ketqua += "<button class =\"btn1 so0\">" +list[i]+ "</button>";
+                                }
+
+                                if((i+1) % dong == 0 ){
+                                    ketqua +="<br>";
+                                }
+                                
+                            }
+                            document.getElementById("showNum").innerHTML= ketqua;
                         // }
 
 
@@ -57,7 +83,11 @@
                 <label>Số lượng các chữ số: </label>
                 <span id="listLen"></span>
             </div>
+            <div id="showNum">
+
+            </div>
         </form>
+        
     </div>
 </body>
 
