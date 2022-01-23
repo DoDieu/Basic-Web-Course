@@ -20,10 +20,13 @@ label {
     background-color: brown;
 }
 
-.bt1 {
-    padding: 5px;
+.btn1 {
+    padding: 25px;
     margin: 10px;
-    float: left;
+    font-weight:600;
+    font-size: 20px;
+    width: 80px;
+    height: 80px;
     
 }
 .so0{
@@ -34,17 +37,17 @@ label {
     color:white;
 }
 .soam.odd{
-    background-color:red;
+    background-color:rgba(255, 0, 0, 1);
 }
 .soam.even{
-    background-color:rgb(233, 139, 139);
+    background-color:rgba(255, 0, 0, 0.3);
 }
 .soduong.odd{
-    background-color:rgb(25, 248, 4);
+    background-color:rgba(0, 255, 0, 1);
     color:white;
 }
 .soduong.even{
-    background-color:rgb(112, 216, 112);
+    background-color:rgba(0, 255, 0, 0.3);
     color:white;
 }
 
