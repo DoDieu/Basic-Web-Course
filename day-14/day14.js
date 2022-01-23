@@ -3,6 +3,6 @@ function checkL(list){
 }
 function listSort(list){
     list = list.split(",");
-    list.sort(function(a,b){return a-b;});
+    list.sort(function(a,b){return b-a;});
     return list;
 }
