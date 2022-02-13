@@ -1,10 +1,10 @@
 <html>
 
 <head>
-    <title>Trang chủ</title> 
+    <title>Trang chủ</title>
     <link href="https://fonts.googleapis.com/css?family=Roboto+Slab" rel="stylesheet">
     <link rel="stylesheet" type="text/css" href="./styles.css">
-    <script src="./index.js"></script>
+    <script type="text/javascript" src="./index.js"></script>
 </head>
 
 <body>
@@ -20,18 +20,23 @@
     </div>
     <div class="body">
         <div class="side">
-            <p>Thông tin tác giả  </p><a href="" onclick="changeInfo()">Sửa</a>
-            <p>- Họ tên: . . . . <span id="insertInputText"></span> </p>
-            <p>- Ngày sinh: . . . .</p>
-            <p>- Giới tính: . . . .</p>
-            <p>- Địa chỉ: . . . .</p>
+            <p>
+                Thông tin tác giả
+                <span id="profileActionButtons">
+                    <a href="javascript:;" onclick="profileOnEdit()">Sửa</a>
+                </span>
+            </p>
+            <p>- Họ tên: <span id="name">. . . .</span></p>
+            <p>- Ngày sinh: <span id="birthday">. . . .</span></p>
+            <p>- Giới tính: <span id="sex">. . . .</span></p>
+            <p>- Địa chỉ: <span id="address">. . . .</span></p>
             <p><img src="https://webcoban.vn/image/hugo2.jpg" style="filter:grayscale(50%);"></p>
         </div>
         <div class="main">
             <section>
                 <p class="heading">Kinh nghiệm làm việc</p>
-                <div class="content">
-                    <table class="table-kinh-nghiem" border="1">
+                <div class="content" id="content">
+                    <table class="table-kinh-nghiem" border="1" id="workExperience">
                         <thead>
                             <th>STT</th>
                             <th>Thời gian</th>
@@ -40,36 +45,43 @@
                             <th>Công việc</th>
                         </thead>
                         <tbody>
-                            <tr>
+                            <tr id="workExperience1">
                                 <td>
-                                    1
-                                    <a href="" onclick="changeInfo()">Sửa</a>
-                                    <a href="" onclick="changeInfo()">Sửa</a>
+                                    1<br>
+                                    <a href="javascript:;" onclick="changeWorkExperience(this)">Sửa</a><br>
+                                    <a href="javascript:;" onclick="deleteWorkExperience(this)">Xóa</a>
                                 </td>
-                                <td>05/2014 - 7/2020</td>
-                                <td>VNG</td>
-                                <td>Software Engineer</td>
+                                <td id="timeWorkExperience1">05/2014 - 7/2020</td>
+                                <td id="companyWorkExperience1">VNG</td>
+                                <td id="positionWorkExperience1">Software Engineer</td>
                                 <td align="left">
                                     <ul class="list-with-image">
-                                        <li>Design</li>
-                                        <li>Develop</li>
+                                        <li id="detailWork-Fisrt">Design</li>
+                                        <li id="detailWork-Second">Develop</li>
                                     </ul>
                                 </td>
                             </tr>
-                            <tr>
-                                <td>2</td>
-                                <td>07/2020 - Current</td>
-                                <td>Vsee</td>
-                                <td>Software Engineer</td>
+                            <tr id="workExperience2">
+                                <td> 
+                                    2<br>
+                                    <a href="javascript:;" onclick="changeWorkExperience(this)">Sửa</a><br>
+                                    <a href="javascript:;" onclick="deleteWorkExperience(this)">Xóa</a>
+                                </td>
+                                <td id="timeWorkExperience2">07/2020 - Current</td>
+                                <td id="companyWorkExperience2">Vsee</td>
+                                <td id="positionWorkExperience2">Software Engineer</td>
                                 <td align="left">
                                     <ul class="list-with-image">
                                         <li>Design</li>
-                                        <li>Develop</li>
+                                        <li">Develop</li>
                                     </ul>
                                 </td>
                             </tr>
                         </tbody>
                     </table>
+                </div>
+                <div>
+                    <a href="javascript:;" onclick="insertWorkExperience()">Thêm mới</a>
                 </div>
             </section>
 
